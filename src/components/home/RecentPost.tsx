@@ -3,7 +3,7 @@ import Link from "next/link";
 import { LuArrowRight } from "react-icons/lu";
 import { Post } from "@/types/post";
 
-const baseUrl = "http://localhost:3000";
+const baseUrl = "https://techblog-blue.vercel.app/";
 
 export default async function RecentPost() {
   const res = await fetch(`${baseUrl}/api/posts/recent`, { cache: "no-cache" });
@@ -35,7 +35,7 @@ export default async function RecentPost() {
                   alt={post.title}
                   className=" object-cover transition-transform duration-500 group-hover:scale-105"
                   fill
-                  sizes="(max-width: 768px) 100vw, 50vw"  
+                  sizes="(max-width: 768px) 100vw, 50vw"
                 />
                 <div className=" absolute inset-0 bg-black/30" />
               </div>
