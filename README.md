@@ -1,36 +1,127 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🚀 TechBlog
 
-## Getting Started
+A modern **full-stack tech blog platform** built with **Next.js 16**, **TypeScript**, **Bun**, **Prisma**, and **Better Auth**.
 
-First, run the development server:
+This project includes secure authentication, rich text editing, SEO-friendly blog routes, dynamic slugs, and a clean responsive UI.
+
+---
+
+## ✨ Features
+
+* 🔐 Authentication with **Google** and **GitHub** using Better Auth
+* 📝 Rich text article editor with **Jodit Editor**
+* 🧠 Session-based UI (Login → Logout)
+* 📰 Dynamic blog post routes using **slug-based URLs**
+* 🗄️ Database integration with **Prisma + PostgreSQL**
+* 🖼️ Optimized user avatars with **Next/Image**
+* ⚡ Fast package management and scripts powered by **Bun**
+* 🎨 Responsive UI with **Tailwind CSS**
+* 🛡️ Type-safe development with **TypeScript**
+* 🚀 Ready for deployment on **Vercel**
+
+---
+
+## 🛠️ Tech Stack
+
+* **Framework:** Next.js 16
+* **Language:** TypeScript
+* **Runtime / Package Manager:** Bun
+* **Database ORM:** Prisma
+* **Database:** PostgreSQL / Prisma Postgres
+* **Authentication:** Better Auth
+* **OAuth Providers:** Google, GitHub
+* **State Management:** Zustand
+* **Rich Text Editor:** Jodit Editor
+* **HTTP Client:** Axios
+* **Icons:** React Icons
+* **Slug Generation:** slugify
+* **Styling:** Tailwind CSS
+
+---
+
+## 📂 Project Structure
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
+src/
+ ├── app/
+ │   ├── posts/
+ │   ├── write/
+ │   └── api/
+ ├── components/
+ ├── lib/
+ ├── generated/
+ │   └── prisma/
+ └── actions/
+
+prisma/
+ └── schema.prisma
+```
+
+---
+
+## ⚙️ Environment Variables
+
+Create a `.env` file in the root directory:
+
+```env
+DATABASE_URL=
+BETTER_AUTH_SECRET=
+GOOGLE_CLIENT_ID=
+GOOGLE_CLIENT_SECRET=
+GITHUB_CLIENT_ID=
+GITHUB_CLIENT_SECRET=
+```
+
+---
+
+## 🚀 Getting Started
+
+Install dependencies:
+
+```bash
+bun install
+```
+
+Run development server:
+
+```bash
 bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Generate Prisma client:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+bunx prisma generate
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Push schema to database:
 
-## Learn More
+```bash
+bunx prisma db push
+```
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 🚀 Deployment
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+This project is fully compatible with **Vercel**.
 
-## Deploy on Vercel
+If you deploy using **Bun runtime**, add a `vercel.json` file:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+```json
+{
+  "bunVersion": "1.x"
+}
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
+
+## 📸 Preview
+
+A clean and modern blogging experience with authentication, post creation, dynamic routing, and optimized media.
+
+---
+
+## 👨‍💻 Author
+
+Built by **Rodrigo Bilbao** while learning and building modern full-stack apps with Next.js.
